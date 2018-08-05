@@ -20,7 +20,9 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --ignore-path .gitignore --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -35,11 +37,47 @@
     "@storybook/addons": "4.0.0-alpha.14",
     "@storybook/react": "4.0.0-alpha.14",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
     "babel-runtime": "^6.26.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.4.2",
     "prettier": "^1.13.7"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/mathspy/gatsby-storybook-jest-stater"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/jest-preprocess.js"
+    },
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
+      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "setupTestFrameworkScriptFile": "./setupTests.js",
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "/.cache/"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(gatsby)/)"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "globals": {
+      "__PATH_PREFIX__": ""
+    },
+    "setupFiles": [
+      "<rootDir>/loadershim.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "testURL": "http://localhost"
   }
 }

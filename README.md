@@ -51,11 +51,22 @@ A Gatsby starter based on the default with storybook and jest pre-installed.
 
     At first you can read the explanation for what are stories and how using them differ with Gatsby in the "Welcome" story. Open the `stories` directory in your code editor of choice and edit existing or create new stories (which should all end with `.stories.js`). Save your changes and the browser will update in real time with your components' stories!
 
+6.  **Test your first React component!**
+
+    You can start running Jest's watch functionality
+
+    ```sh
+    npm run test:watch
+    ```
+
+    Testing Gatsby components is pretty straight forward if you have any experience with testing React components in general, otherwise you can start you testing journey in [the Jest docs](https://jestjs.io/docs/en/tutorial-react) and by checking out the simple test I wrote in `/src/components/__tests__/layout.test.js`
+
 ## 🧐 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
     .
+    ├── __mocks__
     ├── .storybook
     ├── node_modules
     ├── src
@@ -66,10 +77,13 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── gatsby-config.js
     ├── gatsby-node.js
     ├── gatsby-ssr.js
+    ├── jest-preprocess.js
     ├── LICENSE
+    ├── loadershim.js
     ├── package-lock.json
     ├── package.json
     ├── README.md
+    ├── setupTest.js
     └── yarn.lock
 
 
@@ -102,6 +116,8 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
   14.  **`README.md`**: A text file containing useful reference information about your project.
 
   15.  **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm.  This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
+
+  16.  **`__mocks__`**, **`jest-preprocess.js`**, **`loadershim.js`**, **`setupTest.js`**: are all files/folders needed to configure [Jest](https://jestjs.io) to work properly with Gatsby, more can be learnt about that [here](https://github.com/gatsbyjs/gatsby/pull/6678). Many thanks to [@ascorbic](https://github.com/ascorbic/) for writing this out, doubt I would have been able to find out how to get everything working without the amazing write-up.
 
 ## 🎓 Learning Gatsby
 
