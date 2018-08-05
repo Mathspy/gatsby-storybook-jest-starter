@@ -1,0 +1,32 @@
+{
+  "name": "gatsby-storybook-jest-stater",
+  "description": "A Gatsby starter based on default with added Storybook and Jest configurations",
+  "version": "1.0.0",
+  "author": "Mathspy <mathspy257@gmail.com>",
+  "dependencies": {
+    "gatsby": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby",
+    "storybook",
+    "jest"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --ignore-path .gitignore --write '**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.13.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathspy/gatsby-storybook-jest-stater"
+  }
+}
