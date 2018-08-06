@@ -35,13 +35,6 @@ storiesOf('Welcome', module)
           Header Story
         </button>
       </p>
-      <p>
-        Note that since Header implements Gatsby's Link component (which by
-        extent implements React-Router's Link component){' '}
-        <a href="https://github.com/storybooks/storybook/issues/769#issuecomment-294082103">
-          the story needs a simple MemoryRouter decorator
-        </a>
-      </p>
       <hr />
       <p>
         Things do get a little bit tricky once pages or other components that
@@ -53,12 +46,24 @@ storiesOf('Welcome', module)
         creating folder components as demonstrated below:
         <ul>
           <li>
-            for each component with a query i.e{' '}
-            <code>components/layout.js</code> we can create a folder named the
-            same as the component with an <code>index.js</code> and
+            for each component with a query (that is not inside of{' '}
+            <code>/pages</code> folder) i.e <code>components/layout.js</code> we
+            can create a folder named the same as the component with an{' '}
+            <code>index.js</code> and
             <code>component-name.js</code> inside of it i.e:
             <code>components/layout/index.js</code> and{' '}
             <code>components/layout/layout.js</code>
+            <br />
+            <br />
+            <span style={{ color: 'red', opacity: 0.7 }}>
+              Note: For components inside of <code>/pages</code>, the component
+              with the render logic should be placed somewhere else (i.e not
+              inside of <code>/pages</code>, could be plaed inside of{' '}
+              <code>/components</code>) because Gatsby will attempt to create an
+              actual "page" out of each component in <code>/pages</code> which
+              would usually work fine while developing but then will
+              unexpectedly break while building for production
+            </span>
           </li>
           <li>
             we move the query logic into the <code>index.js</code> file while
@@ -67,8 +72,9 @@ storiesOf('Welcome', module)
           </li>
           <li>
             we reference the layout component from within <code>index.js</code>{' '}
-            by simply importing <code>./layout</code> and passing the necessary
-            properties from the query to it
+            by simply importing <code>./layout</code> (unless it's not in the
+            same folder as <code>index.js</code>, like page components) and
+            passing the necessary properties from the query to it
           </li>
         </ul>
         And that's all! Now you can reference <code>components/layout</code> and

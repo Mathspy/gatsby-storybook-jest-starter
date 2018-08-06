@@ -47,17 +47,25 @@ describe('Layout', () => {
 
 describe('LayoutWrapper', () => {
   it('should be a StaticQuery component', () => {
-    const wrapper = shallow(<LayoutWrapper><div /></LayoutWrapper>)
+    const wrapper = shallow(
+      <LayoutWrapper>
+        <div />
+      </LayoutWrapper>
+    )
 
     expect(wrapper.type()).toBe(StaticQuery)
   })
 
   it('should render a Layout and pass to it the correct props', () => {
-    const wrapper = shallow(<LayoutWrapper><div /></LayoutWrapper>)
+    const wrapper = shallow(
+      <LayoutWrapper>
+        <div />
+      </LayoutWrapper>
+    )
 
     const inner = wrapper.prop('render')(data)
 
     expect(inner.type).toBe(Layout)
-    expect(inner.props).toEqual({data, children: <div />})
+    expect(inner.props).toEqual({ data, children: <div /> })
   })
 })

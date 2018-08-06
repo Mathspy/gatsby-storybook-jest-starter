@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "author": "Mathspy <mathspy257@gmail.com>",
   "dependencies": {
-    "gatsby": "next",
+    "gatsby": "^2.0.0-beta.72",
     "gatsby-plugin-react-helmet": "next",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
@@ -32,10 +32,10 @@
     "@babel/preset-env": "^7.0.0-beta.56",
     "@babel/preset-react": "^7.0.0-beta.56",
     "@babel/runtime": "^7.0.0-beta.56",
-    "@storybook/addon-actions": "4.0.0-alpha.14",
-    "@storybook/addon-links": "4.0.0-alpha.14",
-    "@storybook/addons": "4.0.0-alpha.14",
-    "@storybook/react": "4.0.0-alpha.14",
+    "@storybook/addon-actions": "^4.0.0-alpha.16",
+    "@storybook/addon-links": "^4.0.0-alpha.16",
+    "@storybook/addons": "^4.0.0-alpha.16",
+    "@storybook/react": "^4.0.0-alpha.16",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.4.2",
     "babel-runtime": "^6.26.0",
@@ -44,7 +44,7 @@
     "enzyme-to-json": "^3.3.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.4.2",
-    "prettier": "^1.13.7"
+    "prettier": "^1.14.0"
   },
   "repository": {
     "type": "git",
