@@ -21,7 +21,7 @@ A Gatsby starter based on the default with storybook and jest pre-installed.
 
     ```sh
     # create a new Gatsby site using this starter
-    gatsby new project-name https://github.com/mathspy/gatsby-storybook-jest-stater
+    gatsby new project-name https://github.com/mathspy/gatsby-storybook-jest-starter
     ```
 
 3.  **Start developing.**
@@ -129,4 +129,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mathspy/gatsby-storybook-jest-stater)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mathspy/gatsby-storybook-jest-starter)
